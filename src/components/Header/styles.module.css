@@ -1,0 +1,15 @@
+.header {
+    background: rgb(79, 70, 229);
+    box-shadow: none;
+}
+
+.toolbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.links {
+    display: flex;
+    gap: 10px;
+}
