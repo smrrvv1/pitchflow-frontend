@@ -1,12 +1,23 @@
 import {Card, CardContent, Typography, Button} from '@mui/material';
 import type { IStartup } from '../../types';
 import styles from './styles.module.css';
+import { axiosApi } from '../../axiosApi';
 
 interface Props {
     startup: IStartup;
 }
 
 export const StartupCard = ({ startup }: Props) => {
+    const deleteStartup = async() => {
+        try {
+            await axiosApi.delete( `/startups/${startup.id}`)
+    
+            window.location.reload()
+        } catch (e) {
+            console.log(e)
+        }
+    }
+
     return (
         <Card className={styles.card}>
             <CardContent>
@@ -30,6 +41,13 @@ export const StartupCard = ({ startup }: Props) => {
                     variant="contained"
                     className={styles.button}>
                     Connect
+                </Button>
+                <Button
+                    variant="outlined"
+                    color="error"
+                    onClick={deleteStartup}
+                    className={styles.deleteBtn}>
+                    Delete
                 </Button>
             </CardContent>
         </Card>
