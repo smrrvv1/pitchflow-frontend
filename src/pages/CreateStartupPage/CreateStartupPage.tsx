@@ -17,10 +17,8 @@ export const CreateStartupPage = () => {
             })
 
           navigate('/')
-      }  catch (e: any) {
-        console.log(
-            e.response.data.detail[0]
-        );
+      }  catch (e) {
+        console.log(e);
     }
 };
 
