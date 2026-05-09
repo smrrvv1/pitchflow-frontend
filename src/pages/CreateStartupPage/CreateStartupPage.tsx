@@ -10,16 +10,19 @@ export const CreateStartupPage = () => {
       startupData: StartupFormData
   ) => {
       try {
-          await axiosApi.post(
-              '/startups/',
-              startupData
-          )
+          await axiosApi.post('/startups/',
+            {
+                ...startupData,
+                owner_id: 1,
+            })
 
           navigate('/')
-      } catch (e) {
-          console.log(e)
-      }
-  }
+      }  catch (e: any) {
+        console.log(
+            e.response.data.detail[0]
+        );
+    }
+};
 
     return (
       <div>

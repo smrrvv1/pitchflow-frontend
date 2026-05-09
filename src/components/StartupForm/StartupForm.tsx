@@ -13,7 +13,6 @@ export interface StartupFormData {
     tags: string;
     stage: string;
     target_amount: string;
-    owner_id: number;
 }
 
 export const StartupForm = ({ onSubmit }: Props) => {
@@ -24,7 +23,7 @@ export const StartupForm = ({ onSubmit }: Props) => {
         tags: '',
         stage: '',
         target_amount: '',
-        owner_id: 1,
+
     })
 
     const changeForm = (e: React.ChangeEvent<HTMLInputElement>) => {
@@ -51,7 +50,7 @@ export const StartupForm = ({ onSubmit }: Props) => {
                 onChange={changeForm}/>
 
             <TextField
-                label="One liner"
+                label="Short Description "
                 name="one_liner"
                 value={form.one_liner}
                 onChange={changeForm}/>
