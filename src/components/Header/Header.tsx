@@ -1,5 +1,5 @@
 import { AppBar, Toolbar, Typography, Button } from '@mui/material';
-import { Link } from 'react-router';
+import { Link } from 'react-router-dom';
 
 import styles from './styles.module.css';
 

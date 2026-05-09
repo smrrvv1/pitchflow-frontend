@@ -7,7 +7,7 @@ import styles from './styles.module.css';
 export const HomePage = () => {
   const [startups, setStartups] = useState<IStartup[]>([])
 
-  useEnhancedEffect(() => {
+  useEffect(() => {
     const getStartups = async() => {
         try {
             const response = await axiosApi.get('/startups/')
