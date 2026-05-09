@@ -5,6 +5,7 @@ import { LoginPage } from './pages/LoginPage/LoginPage';
 import { CreateStartupPage } from './pages/CreateStartupPage/CreateStartupPage';
 import { MyStartupsPage } from './pages/MyStartupsPage/MyStartupsPage';
 import { Header } from './components/Header/Header';
+import { RegisterPage } from './pages/RegisterPage/RegisterPage';
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
       <Route path="/login" element={<LoginPage />} />
       <Route path="/create-startup" element={<CreateStartupPage />} />
       <Route path="/my-startups" element={<MyStartupsPage />} />
+      <Route path="/register" element={<RegisterPage />}/>
      </Routes>
     </>
     

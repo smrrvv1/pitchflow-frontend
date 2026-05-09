@@ -46,6 +46,12 @@ export const Header = () => {
           >
             Login
           </Button>
+          <Button
+            color="inherit"
+            component={Link}
+            to="/register">
+            Register
+          </Button>
         </div>
       </Toolbar>
     </AppBar>
