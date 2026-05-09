@@ -20,7 +20,7 @@ export const StartupCard = ({ startup }: Props) => {
 
     return (
         <Card className={styles.card}>
-            <CardContent>
+            <CardContent >
                 <Typography variant="h5">
                     {startup.title}
                 </Typography>
@@ -37,18 +37,20 @@ export const StartupCard = ({ startup }: Props) => {
                     {startup.target_amount}
                 </Typography>
 
-                <Button
-                    variant="contained"
-                    className={styles.button}>
-                    Connect
-                </Button>
-                <Button
-                    variant="outlined"
-                    color="error"
-                    onClick={deleteStartup}
-                    className={styles.deleteBtn}>
-                    Delete
-                </Button>
+                <div className={styles.buttons}>
+                    <Button
+                        variant="contained"
+                        className={styles.button}>
+                        Connect
+                    </Button>
+
+                    <Button
+                        variant="outlined"
+                        color="error"
+                        onClick={deleteStartup}>
+                        Delete
+                    </Button>
+                </div>
             </CardContent>
         </Card>
     )

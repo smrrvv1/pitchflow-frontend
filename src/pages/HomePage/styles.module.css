@@ -2,7 +2,16 @@
     display: flex;
     flex-wrap: wrap;
     gap: 20px;
-    padding: 30px;
+    min-height: 800px;
+}
+
+.wrapper {
     background: rgb(245, 247, 255);
     min-height: 800px;
+    padding: 30px;
+}
+
+.title {
+    margin-bottom: 30px;
+    color: rgb(17, 24, 39);
 }

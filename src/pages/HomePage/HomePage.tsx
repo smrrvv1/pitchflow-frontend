@@ -22,15 +22,21 @@ export const HomePage = () => {
     }, [])
 
     return (
-      <div className={styles.container}>
-        {
-          startups.map((startup) => (
-            <StartupCard
-                key={startup.id}
-                startup={startup}
-            />
-          ))
-        }
+      <div className={styles.wrapper}>
+        <h1 className={styles.title}>
+            Startup Feed
+        </h1>
+
+        <div className={styles.container}>
+          {
+            startups.map((startup) => (
+              <StartupCard
+                  key={startup.id}
+                  startup={startup}
+              />
+            ))
+          }
+        </div>
       </div>
     )
   }

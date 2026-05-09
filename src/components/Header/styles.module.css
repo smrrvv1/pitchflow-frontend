@@ -1,6 +1,7 @@
 .header {
     background: rgb(79, 70, 229);
-    box-shadow: none;
+    color: rgb(0, 0, 0) ;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
 }
 
 .toolbar {
