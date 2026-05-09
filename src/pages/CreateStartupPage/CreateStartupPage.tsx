@@ -1,7 +1,39 @@
+import { Typography } from '@mui/material';
+import { useNavigate } from 'react-router-dom';
+import { axiosApi } from '../../axiosApi';
+import {StartupForm, type StartupFormData} from '../../components/StartupForm/StartupForm';
+
 export const CreateStartupPage = () => {
+  const navigate = useNavigate()
+
+  const createStartup = async(
+      startupData: StartupFormData
+  ) => {
+      try {
+          await axiosApi.post(
+              '/startups/',
+              startupData
+          )
+
+          navigate('/')
+      } catch (e) {
+          console.log(e)
+      }
+  }
+
     return (
       <div>
-        <h1>Create Startup Page</h1>
+        <Typography
+                variant="h4"
+                align="center"
+                sx={{
+                    marginTop: '30px',
+                }}>
+                  Create Startup
+            </Typography>
+
+            <StartupForm
+                onSubmit={createStartup}/>
       </div>
     )
   }
