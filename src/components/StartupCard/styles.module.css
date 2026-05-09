@@ -1,0 +1,16 @@
+.card {
+    width: 320px;
+    border-radius: 20px;
+    box-shadow: none;
+    border: 1px solid rgb(229, 231, 235);
+}
+
+.oneLiner {
+    margin: 10px 0;
+    color: rgb(107, 114, 128);
+}
+
+.button {
+    margin-top: 15px;
+    background: rgb(79, 70, 229);
+}
