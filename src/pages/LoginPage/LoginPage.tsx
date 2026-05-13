@@ -31,7 +31,7 @@ export const LoginPage = () => {
     } catch (e) {
         console.log(e)
 
-        alert('Login error')
+        alert('Wrong email or password')
     }
   }
 

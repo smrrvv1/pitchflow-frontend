@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react';
 import { axiosApi } from '../../axiosApi';
 import type { IStartup } from '../../types';
+import { Typography } from '@mui/material';
 import { StartupCard } from '../../components/StartupCard/StartupCard';
 import styles from './styles.module.css';
 

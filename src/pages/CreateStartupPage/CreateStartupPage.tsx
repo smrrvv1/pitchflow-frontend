@@ -42,4 +42,4 @@ export const CreateStartupPage = () => {
             onSubmit={createStartup}
         />
     </div>
-)
+)}
