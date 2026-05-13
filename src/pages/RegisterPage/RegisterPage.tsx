@@ -48,7 +48,13 @@ export const RegisterPage = () => {
                     label="Full Name"
                     name="full_name"
                     value={form.full_name}
-                    onChange={changeForm}/>
+                    onChange={(e) => {
+                        const value = e.target.value
+                
+                        if (/^[A-Za-zА-Яа-я ]*$/.test(value)) {
+                            changeForm(e)
+                        }
+                    }}/>
 
                 <TextField
                     label="Email"

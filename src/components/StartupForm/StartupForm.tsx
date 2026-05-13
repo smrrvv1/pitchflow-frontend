@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { Button, TextField } from '@mui/material';
+import { Button, TextField, MenuItem } from '@mui/material';
 import styles from './styles.module.css';
 
 interface Props {
@@ -21,7 +21,7 @@ export const StartupForm = ({ onSubmit }: Props) => {
         one_liner: '',
         description: '',
         tags: '',
-        stage: '',
+        stage: 'idea',
         target_amount: '',
 
     })
@@ -68,16 +68,37 @@ export const StartupForm = ({ onSubmit }: Props) => {
                 onChange={changeForm}/>
 
             <TextField
+                select
                 label="Stage"
                 name="stage"
                 value={form.stage}
-                onChange={changeForm}/>
+                onChange={changeForm}
+            >
+                 <MenuItem value="idea">
+                    Idea
+                </MenuItem>
+
+                <MenuItem value="mvp">
+                    MVP
+                </MenuItem>
+
+                <MenuItem value="seed">
+                    Seed
+                </MenuItem>
+            </TextField>
 
             <TextField
                 label="Target amount"
                 name="target_amount"
                 value={form.target_amount}
-                onChange={changeForm}/>
+                onChange={(e) => {
+                    const value = e.target.value
+            
+                    if (/^[0-9]*$/.test(value)) {
+                        changeForm(e)
+                    }
+                }}
+                />
 
             <Button
                 type="submit"
