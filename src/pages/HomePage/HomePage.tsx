@@ -3,6 +3,7 @@ import { axiosApi } from '../../axiosApi';
 import type { IStartup } from '../../types';
 import { StartupCard } from '../../components/StartupCard/StartupCard';
 import styles from './styles.module.css';
+import { Typography } from '@mui/material';
 
 export const HomePage = () => {
   const [startups, setStartups] = useState<IStartup[]>([])
@@ -23,20 +24,29 @@ export const HomePage = () => {
 
     return (
       <div className={styles.wrapper}>
-        <h1 className={styles.title}>
-            Startup Feed
-        </h1>
+            <div className={styles.headerBlock}>
+                <Typography
+                    variant="h3"
+                    className={styles.title}
+                >
+                    Startup Feed
+                </Typography>
 
-        <div className={styles.container}>
-          {
-            startups.map((startup) => (
-              <StartupCard
-                  key={startup.id}
-                  startup={startup}
-              />
-            ))
-          }
+                <Typography className={styles.subtitle}>
+                    Explore startup ideas and connect with interesting projects
+                </Typography>
+            </div>
+
+            <div className={styles.container}>
+                {
+                    startups.map((startup) => (
+                        <StartupCard
+                            key={startup.id}
+                            startup={startup}
+                        />
+                    ))
+                }
+            </div>
         </div>
-      </div>
     )
-  }
+}

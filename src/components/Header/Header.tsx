@@ -18,6 +18,7 @@ export const Header = () => {
 
         <div className={styles.links}>
           <Button
+            color="inherit"
             component={Link}
             to="/"
             className={styles.link}
@@ -27,6 +28,7 @@ export const Header = () => {
 
           <Button
             component={Link}
+            color="inherit"
             to="/create-startup"
             className={styles.link}
           >
@@ -35,6 +37,7 @@ export const Header = () => {
 
           <Button
             component={Link}
+            color="inherit"
             to="/my-startups"
             className={styles.link}
           >
@@ -43,6 +46,7 @@ export const Header = () => {
 
           <Button
             component={Link}
+            color="inherit"
             to="/login"
             className={styles.link}
           >
@@ -51,6 +55,7 @@ export const Header = () => {
 
           <Button
             component={Link}
+            color="inherit"
             to="/register"
             className={styles.registerBtn}>
             Register

@@ -22,15 +22,30 @@ export const MyStartupsPage = () => {
     }, [])
 
     return (
-        <div className={styles.container}>
-            {
-                startups.map((startup) => (
-                    <StartupCard
-                        key={startup.id}
-                        startup={startup}
-                    />
-                ))
-            }
+        <div className={styles.wrapper}>
+            <div className={styles.headerBlock}>
+                <Typography
+                    variant="h3"
+                    className={styles.title}
+                >
+                    My Startups
+                </Typography>
+
+                <Typography className={styles.subtitle}>
+                    Track projects created by your account
+                </Typography>
+            </div>
+
+            <div className={styles.container}>
+                {
+                    startups.map((startup) => (
+                        <StartupCard
+                            key={startup.id}
+                            startup={startup}
+                        />
+                    ))
+                }
+            </div>
         </div>
     )
 }

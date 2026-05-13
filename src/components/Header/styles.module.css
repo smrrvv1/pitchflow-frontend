@@ -18,14 +18,21 @@
 }
 
 .logo {
-    color: rgb(79, 70, 229);
+    color: rgb(237, 236, 255);
     font-weight: 700;
 }
 
 .link {
-    color: rgb(55, 65, 81);
+    color: rgb(255, 255, 255);
     text-transform: none;
     font-size: 15px;
+    background: transparent;
+    border-radius: 12px;
+    padding: 8px 14px;
+}
+
+.link:hover {
+    background: rgb(0, 8, 255);
 }
 
 .registerBtn {
@@ -35,4 +42,8 @@
     text-transform: none;
     font-size: 15px;
     padding: 8px 16px;
+}
+
+.registerBtn:hover {
+    background:  rgb(0, 8, 255);
 }
