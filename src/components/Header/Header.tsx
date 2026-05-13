@@ -10,46 +10,49 @@ export const Header = () => {
       className={styles.header}
     >
       <Toolbar className={styles.toolbar}>
-        <Typography variant="h5">
+        <Typography 
+        variant="h5"
+        className={styles.logo}>
           Project Hub
         </Typography>
 
         <div className={styles.links}>
           <Button
-            color="inherit"
             component={Link}
             to="/"
+            className={styles.link}
           >
             Home
           </Button>
 
           <Button
-            color="inherit"
             component={Link}
             to="/create-startup"
+            className={styles.link}
           >
             Create
           </Button>
 
           <Button
-            color="inherit"
             component={Link}
             to="/my-startups"
+            className={styles.link}
           >
             My Startups
           </Button>
 
           <Button
-            color="inherit"
             component={Link}
             to="/login"
+            className={styles.link}
           >
             Login
           </Button>
+
           <Button
-            color="inherit"
             component={Link}
-            to="/register">
+            to="/register"
+            className={styles.registerBtn}>
             Register
           </Button>
         </div>
