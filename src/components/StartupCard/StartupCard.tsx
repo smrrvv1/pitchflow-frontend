@@ -21,7 +21,10 @@ export const StartupCard = ({ startup }: Props) => {
     return (
         <Card className={styles.card}>
             <CardContent >
-                <Typography variant="h5">
+                <Typography 
+                    variant="h5"
+                    className={styles.title}
+                >
                     {startup.title}
                 </Typography>
 
@@ -29,13 +32,17 @@ export const StartupCard = ({ startup }: Props) => {
                     {startup.one_liner}
                 </Typography>
 
-                <Typography>
+                <Typography className={styles.info}>
                     Stage: {startup.stage}
                 </Typography>
 
-                <Typography>
-                    {startup.target_amount}
+                <Typography className={styles.info}>
+                    Target: {startup.target_amount}
                 </Typography>
+
+                <span className={styles.tags}>
+                    {startup.tags}
+                </span>
 
                 <div className={styles.buttons}>
                     <Button
@@ -47,7 +54,8 @@ export const StartupCard = ({ startup }: Props) => {
                     <Button
                         variant="outlined"
                         color="error"
-                        onClick={deleteStartup}>
+                        onClick={deleteStartup}
+                        className={styles.deleteBtn}>
                         Delete
                     </Button>
                 </div>
