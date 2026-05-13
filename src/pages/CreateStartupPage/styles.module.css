@@ -1,0 +1,23 @@
+.wrapper {
+    background: rgb(245, 247, 255);
+    min-height: 800px;
+    padding: 40px;
+}
+
+.headerBlock {
+    max-width: 650px;
+    margin: 0 auto 30px auto;
+    text-align: center;
+}
+
+.title {
+    color: rgb(17, 24, 39);
+    font-weight: 700;
+    margin: 0;
+}
+
+.subtitle {
+    color: rgb(107, 114, 128);
+    margin-top: 10px;
+    font-size: 18px;
+}

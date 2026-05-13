@@ -2,6 +2,7 @@ import { Typography } from '@mui/material';
 import { useNavigate } from 'react-router-dom';
 import { axiosApi } from '../../axiosApi';
 import {StartupForm, type StartupFormData} from '../../components/StartupForm/StartupForm';
+import styles from './styles.module.css';
 
 export const CreateStartupPage = () => {
   const navigate = useNavigate()
@@ -23,18 +24,22 @@ export const CreateStartupPage = () => {
 };
 
     return (
-      <div>
-        <Typography
-                variant="h4"
-                align="center"
-                sx={{
-                    marginTop: '30px',
-                }}>
-                  Create Startup
+      <div className={styles.wrapper}>
+        <div className={styles.headerBlock}>
+            <Typography
+                variant="h3"
+                className={styles.title}
+            >
+                Submit your startup
             </Typography>
 
-            <StartupForm
-                onSubmit={createStartup}/>
-      </div>
-    )
-  }
+            <Typography className={styles.subtitle}>
+                Share your project idea and make it visible for investors
+            </Typography>
+        </div>
+
+        <StartupForm
+            onSubmit={createStartup}
+        />
+    </div>
+)
